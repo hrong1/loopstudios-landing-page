@@ -1,7 +1,7 @@
 // color
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
-$grey-200: hsl(0, 0%, 85%);
+$grey: hsl(0, 0%, 50%);
 // font
 $font-alata: "Alata", sans-serif;
 $font-josefin: "Josefin Sans", sans-serif;
@@ -12,12 +12,16 @@ $fs-sm: 0.875rem;
 $fs-lg: 1.25rem;
 $fs-xl: 1.5rem;
 $fs-xxl: 2rem;
+$font-bold: 700;
+$font-normal: 400;
+$font-thin: 300;
+$letter-spacing: 0.1rem;
 // spacing and margins
-$spacing-1: 0.25rem; // 4px
-$spacing-2: 0.5rem; // 8px
-$spacing-3: 1rem; // 16px 
-$spacing-4: 1.5rem; // 24px
-$spacing-5: 2rem; // 32px
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 1rem;
+$spacing-4: 1.5rem;
+$spacing-5: 2rem;
 $spacing-6: 3rem;
 // radius
 $border-radius-sm: 0.25rem;
@@ -27,3 +31,5 @@ $border-radius-pill: 50rem;
 $border-radius-circle: 50%;
 // animation
 $animation-time: 0.3s;
+// border
+$border-width: 0.1rem;

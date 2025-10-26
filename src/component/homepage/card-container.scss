@@ -1,0 +1,31 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-3;
+    margin-top: $spacing-5 * 2;
+
+    &__title {
+        font-family: $font-josefin;
+        font-weight: $font-thin;
+        font-size: $fs-xxl;
+        text-transform: uppercase;
+    }
+
+    &__grid {
+        max-width: 90%;
+        display: grid;
+        gap: $spacing-3;
+    }
+
+    &__button {
+        font-family: $font-josefin;
+        background-color: transparent;
+        letter-spacing: $letter-spacing;
+        border: $border-width solid $black;
+        padding: $spacing-2 $spacing-6;
+        margin-top: $spacing-3;
+    }
+}

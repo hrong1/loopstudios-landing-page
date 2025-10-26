@@ -14,7 +14,7 @@ const Card = ({ title, imgDesktop, imgMobile, altText }) => {
                     alt={altText} 
                 />
             </picture>
-            <h3>{title}</h3>
+            <h3 className='card__title'>{title}</h3>
         </div>
     )
 }
