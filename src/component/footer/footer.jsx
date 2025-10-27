@@ -20,7 +20,7 @@ const WebFooter = ({ itemsList }) => {
                     <img src={logo} alt=''/>
                 </a>
             </div>
-            <nav className="footer__nav">
+            <nav className="footer__nav" aria-label="Footer">
                 <ul id="footer-list" className="footer__nav-list">
                     {itemsList.map((itemText) => (
                         <li key={itemText}>

@@ -33,9 +33,10 @@ const WebHeader = ({ sidebarList }) => {
                         <img src={logo} alt=''/>
                     </a>
                 </div>
-                <nav className="header__nav">
+                <nav className="header__nav" aria-label="Sidebar">
                     <button className="header__nav-toggle" 
-                        aria-controls="nav-list" 
+                        aria-controls="nav-list"
+                        type='button' 
                         aria-expanded={isOpen} 
                         aria-label="Menu"
                         onClick={handleToggle}>
