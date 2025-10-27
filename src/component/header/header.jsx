@@ -21,7 +21,7 @@ const WebHeader = ({ sidebarList }) => {
                 <img 
                     className='header__image'
                     src={imgMobile} 
-                    alt="{altText} "
+                    alt="A person wearing virtual reality goggles and holding a racing wheel sits in a gaming chair. The scene is lit with vibrant purple and red hues, evoking an immersive, futuristic atmosphere."
                 />
             </picture>
             <h1 className='header__title'>
