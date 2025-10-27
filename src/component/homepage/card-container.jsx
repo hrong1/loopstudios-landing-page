@@ -78,7 +78,7 @@ const Container = () => {
                             title={card.title}
                             imgDesktop={imgDesktop}
                             imgMobile={imgMobile}
-                            alt={card.altText}
+                            altText={card.altText}
                         />
                     );
                 })}
