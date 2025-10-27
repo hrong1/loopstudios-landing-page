@@ -1,11 +1,13 @@
 body {
     font-family: $font-alata;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 body:has(header.is-open) {
     overflow: hidden;
+}
+
+@media (min-width: 50rem) {
+    main {
+        padding: 0 $spacing-6 + $spacing-3;
+    }
 }

@@ -3,22 +3,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 100%;
+    cursor: pointer;
 
-    &__image {
+    &__image-container {
         width: 100%;
     }
 
+    &__image {
+        width: 100%;
+        transition: opacity $animation-time ease-in;
+    }
+
     &__title {
+        width: 80%;
         font-family: $font-josefin;
         color: $white;
         font-weight: $font-thin;
         position: absolute;
         font-size: $fs-xl;
-        bottom: 0;
-        left: 0;
-        margin: $spacing-3;
+        bottom: 0 + $spacing-3;
+        left: 0 + $spacing-3;
         text-transform: uppercase;
+        transition: color $animation-time ease-in;
+    }
+    
+    &:hover {
+        .card__image {
+            opacity: $default-opacity;
+        }
+
+        .card__title {
+            color: $black;
+        }
     }
 }

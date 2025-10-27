@@ -2,8 +2,8 @@ import './card-container.scss';
 import Card from './card/card';
 
 
-const desktopImages = import.meta.glob('../../assets/desktop/*.jpg', { eager: true, as: 'url' });
-const mobileImages = import.meta.glob('../../assets/mobile/*.jpg', { eager: true, as: 'url' });
+const desktopImages = import.meta.glob('../../assets/desktop/*.jpg', { eager: true, query: '?url', import: 'default' });
+const mobileImages = import.meta.glob('../../assets/mobile/*.jpg', { eager: true, query: '?url', import: 'default' });
 
 const cardData = [
     {

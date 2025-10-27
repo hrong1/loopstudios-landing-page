@@ -5,7 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'loopstudios-landing-page',
+  base: '/loopstudios-landing-page',
 
   resolve: {
     alias: {
@@ -16,7 +16,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/_variables.scss";`,
+        additionalData: `@use "@/styles/_variables.scss" as *;`,
       },
     },
   },

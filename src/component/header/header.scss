@@ -26,7 +26,9 @@
     &__title {
         position: absolute;
         color: $white;
-        border: 0.1rem solid $white;
+        border: $border-width solid $white;
+        width: max-content;
+        max-width: 90%;
         padding: $spacing-5 $spacing-3;
         top: 50%;
         left: 50%;
@@ -84,6 +86,57 @@
 
         .header__top {
             position: fixed;
+        }
+    }
+
+    @media (min-width: 50rem) {
+        &__top {
+            padding: $spacing-3 $spacing-6 + $spacing-3;
+        }
+
+        &__title {
+            left: $spacing-6 + $spacing-3;
+            transform: translate(0%, -50%);
+            font-size: $fs-xxl * 1.5;
+            width: 40%; 
+        }
+
+        &__nav-toggle {
+            display: none;
+        }
+
+        &__nav-list {
+            transform: translateX(0%);
+            background-color: transparent;
+            position: unset;
+            width: unset;
+            height: unset;
+            flex-direction: row;
+            padding: 0;
+            gap: $spacing-6;
+
+            li {
+                a{
+                    padding: $spacing-3 0;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 50%; 
+                        height: $border-width * 2;
+                        background-color: $white;
+                        transform: translateX(-50%) scaleX(0);
+                        transition: transform $animation-time ease-in-out;
+                    }
+
+                    &:hover::after {
+                        transform: translateX(-50%) scaleX(1);
+                    }
+                }
+            }
         }
     }
 

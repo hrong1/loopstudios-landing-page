@@ -22,10 +22,47 @@
 
     &__button {
         font-family: $font-josefin;
-        background-color: transparent;
+        color: $black;
+        background-color: $white;
         letter-spacing: $letter-spacing;
         border: $border-width solid $black;
         padding: $spacing-2 $spacing-6;
         margin-top: $spacing-3;
+        cursor: pointer;
+
+        transition: background-color $animation-time ease-out, color $animation-time ease-out;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    @media (min-width: 50rem) {
+        grid-template-areas:
+            "title  button"  
+            "grid   grid";
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr auto;
+        gap: $spacing-6;
+
+        &__title {
+            text-align: left;
+            grid-area: title;
+        }
+
+        &__button {
+            justify-self: end;
+            grid-area: button;
+        }
+
+        &__grid {
+            max-width: none;
+            width: 100%;
+            grid-area: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
     }
 }

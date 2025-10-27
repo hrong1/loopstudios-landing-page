@@ -41,4 +41,62 @@
         color: $grey;
         font-size: $fs-sm;
     }
+
+    @media (min-width: 50rem) {
+        display: grid;
+        grid-template-areas:
+            "logo icon-list"
+            "nav-list copyright";
+        justify-content: space-between;
+        padding: $spacing-6 $spacing-6 + $spacing-3;
+
+        &__logo {
+            text-align: left;
+            grid-area: logo;
+        }
+
+        &__nav {
+            padding: 0;
+            grid-area: nav-list;
+        }
+
+        &__icon-list {
+            justify-content: flex-end;
+            grid-area: icon-list;
+        }
+
+        &__copyright {
+            grid-area: copyright;
+        }
+
+        &__nav-list {
+            flex-direction: row;
+        }
+
+        &__nav-list,
+        &__icon-list {
+            li {
+                a{
+                    padding: $spacing-2 0;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 50%; 
+                        height: $border-width;
+                        background-color: $white;
+                        transform: translateX(-50%) scaleX(0);
+                        transition: transform $animation-time ease-in-out;
+                    }
+
+                    &:hover::after {
+                        transform: translateX(-50%) scaleX(1);
+                    }
+                }
+            }
+        }
+    }
 }

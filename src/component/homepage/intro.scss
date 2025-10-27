@@ -31,4 +31,23 @@
         color: $grey;
         font-size: $fs-sm;
     }
+
+    @media (min-width: 50rem) {
+        align-items: flex-start;
+        margin-bottom: $spacing-6 * 3;
+        position: relative;
+        text-align: left;
+
+        &__image {
+            max-width: none;
+        }
+
+        &__content {
+            position: absolute;
+            background-color: $white;
+            padding: $spacing-3;
+            left: 50%;
+            bottom: 0;
+        }
+    }
 }
